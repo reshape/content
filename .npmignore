@@ -1,0 +1,7 @@
+.travis.yml
+.gitignore
+.editorconfig
+.github
+.nyc_output
+test
+coverage
