@@ -1,25 +1,25 @@
 {
   "name": "reshape-content",
   "description": "Flexible content transform for reshape",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "Jeff Escalante",
   "ava": {
     "verbose": "true"
   },
   "bugs": "https://github.com/reshape/content/issues",
   "dependencies": {
+    "reshape-plugin-util": "^0.2.0",
     "when": "^3.7.7"
   },
   "devDependencies": {
-    "ava": "0.15.x",
-    "babel-core": "^6.10.1",
-    "babel-preset-es2015": "^6.9.0",
-    "coveralls": "2.x",
+    "ava": "^0.16.0",
+    "coveralls": "^2.11.12",
     "markdown-it": "^7.0.0",
-    "nyc": "6.x",
-    "postcss": "^5.0.21",
+    "nyc": "^7.1.0",
+    "postcss": "^5.1.2",
     "postcss-nested": "^1.0.0",
-    "reshape": "reshape/reshape",
+    "reshape": "0.2.0",
+    "snazzy": "^4.0.1",
     "standard": "7.x"
   },
   "engines": {
@@ -27,17 +27,18 @@
   },
   "homepage": "https://github.com/reshape/content",
   "keywords": [
+    "content",
     "html",
     "reshape",
-    "content",
-    "reshapeplugin"
+    "reshape-plugin"
   ],
   "license": "MIT",
   "main": "lib",
   "repository": "reshape/reshape-content",
   "scripts": {
-    "coveralls": "nyc --reporter=lcov ava && cat ./coverage/lcov.info | coveralls",
-    "pretest": "standard",
+    "coverage": "nyc ava && nyc report --reporter=html && open ./coverage/index.html",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "pretest": "standard | snazzy",
     "test": "nyc ava"
   }
 }
