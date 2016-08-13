@@ -15,7 +15,7 @@
     "ava": "^0.16.0",
     "coveralls": "^2.11.12",
     "markdown-it": "^7.0.0",
-    "nyc": "^7.1.0",
+    "nyc": "^8.0.0",
     "postcss": "^5.1.2",
     "postcss-nested": "^1.0.0",
     "reshape": "0.2.0",
