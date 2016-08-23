@@ -1,6 +1,6 @@
 {
   "name": "reshape-content",
-  "description": "Flexible content transform for reshape",
+  "description": "flexible content transform for reshape",
   "version": "0.1.1",
   "author": "Jeff Escalante",
   "ava": {
