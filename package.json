@@ -34,7 +34,7 @@
   ],
   "license": "MIT",
   "main": "lib",
-  "repository": "reshape/reshape-content",
+  "repository": "reshape/content",
   "scripts": {
     "coverage": "nyc ava && nyc report --reporter=html && open ./coverage/index.html",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
