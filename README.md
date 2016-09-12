@@ -62,7 +62,7 @@ You can use external libraries for this as well, no problem. Just make sure you 
 ```js
 const markdown = require('markdown-it')(/* options */)
 const content = require('reshape-content')({
-  md: (md) => markdown.renderInline(md)
+  md: (md) => markdown.render(md)
 })
 
 reshape({ plugins: content })

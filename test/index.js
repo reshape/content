@@ -2,6 +2,8 @@ const test = require('ava')
 const {join} = require('path')
 const {readFileSync} = require('fs')
 const reshape = require('reshape')
+const sugarml = require('sugarml')
+const MarkdownIt = require('markdown-it')
 const content = require('..')
 
 const getFixture = (file) => readFileSync(join(__dirname, 'fixtures', file), 'utf8')
@@ -30,7 +32,7 @@ test('Strings ES2015', (t) => {
 
 test('markdown', (t) => {
   const html = getFixture('md.html')
-  const markdown = require('markdown-it')()
+  const markdown = MarkdownIt()
   const plugin = content({
     md: (ctx) => markdown.renderInline(ctx)
   })
@@ -86,5 +88,29 @@ test('async promise', (t) => {
     .process(html)
     .then((res) => {
       t.truthy((/<style>\s*\.test\s{\s*text-transform:\suppercase;\s*}\s*\.test__hello\s{\s*color:\sred;\s*}\n\.test__world\s{\s*color:\sblue;\s*}\s*<\/style>/).exec(res.output()))
+    })
+})
+
+test('multiple text nodes', (t) => {
+  const html = getFixture('pipe.sgr')
+  const markdown = MarkdownIt()
+  const plugin = content({ md: (ctx) => markdown.render(ctx) })
+
+  return reshape({ plugins: plugin, parser: sugarml })
+    .process(html)
+    .then((res) => {
+      t.truthy(/<div class="foo"><h1>Header One<\/h1>\s<h2>my list<\/h2>\s<ul>\s<li>item 1<\/li>\s<\/ul>\s<ul>\s<li>item 2<\/li>\s<\/ul>\s<\/div>/.exec(res.output()))
+    })
+})
+
+test('with sugarml block content', (t) => {
+  const html = getFixture('block-content.sgr')
+  const markdown = MarkdownIt()
+  const plugin = content({ md: (ctx) => markdown.render(ctx) })
+
+  return reshape({ plugins: plugin, parser: sugarml })
+    .process(html)
+    .then((res) => {
+      t.truthy(/<div class="foo"><h1>Header One<\/h1>\s<h2>my list<\/h2>\s<ul>\s<li>item 1<\/li>\s<li>item 2<\/li>\s<\/ul>\s<\/div>/.exec(res.output()))
     })
 })
