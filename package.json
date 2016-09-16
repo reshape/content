@@ -15,7 +15,7 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "coveralls": "^2.11.12",
-    "markdown-it": "^7.0.1",
+    "markdown-it": "^8.0.0",
     "nyc": "^8.1.0",
     "postcss": "^5.1.2",
     "postcss-nested": "^1.0.0",
