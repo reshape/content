@@ -10,17 +10,18 @@
   "dependencies": {
     "reshape-parser": "^0.2.1",
     "reshape-plugin-util": "^0.2.1",
-    "when": "^3.7.7"
+    "when": "^3.7.8"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
-    "coveralls": "^2.11.12",
-    "markdown-it": "^8.0.0",
-    "nyc": "^10.0.0",
-    "postcss": "^5.1.2",
-    "postcss-nested": "^1.0.0",
+    "ava": "^0.20.0",
+    "babel-preset-env": "^1.5.2",
+    "coveralls": "^2.13.1",
+    "markdown-it": "^8.3.1",
+    "nyc": "^11.0.3",
+    "postcss": "^6.0.4",
+    "postcss-nested": "^2.0.2",
     "reshape": "^0.4.0",
-    "snazzy": "^6.0.0",
+    "snazzy": "^7.0.0",
     "standard": "^10.0.0",
     "sugarml": "^0.6.0"
   },
