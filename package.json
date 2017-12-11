@@ -19,7 +19,7 @@
     "markdown-it": "^8.3.1",
     "nyc": "^11.0.3",
     "postcss": "^6.0.4",
-    "postcss-nested": "^2.0.2",
+    "postcss-nested": "^3.0.0",
     "reshape": "^0.4.0",
     "snazzy": "^7.0.0",
     "standard": "^10.0.0",
