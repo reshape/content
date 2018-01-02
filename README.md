@@ -23,7 +23,7 @@ npm i reshape-content --save
 
 ## Usage
 
-Start with some html you want to transform in some way. Add an attribute of your choosing to an element that has contents you want to transform.
+Start with some html you want to transform in some way. Add attributes of your choosing to an element that has contents you want to transform, and they will be transformed in that order.
 
 ```html
 <p windoge>Please use windows 98</p>
@@ -41,7 +41,7 @@ reshape({ plugins: content })
   .then((res) => res.output())
 ```
 
-The plugin will remove the custom attribute from the element and replace its contents with your transformed version. Wow!
+The plugin will remove the custom attributes from the element and replace its contents with your transformed version. Wow!
 
 ```html
 <p>Please use winDOGE 98</p>

@@ -45,6 +45,22 @@ test('markdown', (t) => {
     })
 })
 
+test('multiple attributes', (t) => {
+  const html = getFixture('multiple.html')
+  const markdown = MarkdownIt()
+  const plugin = content({
+    md: (ctx) => markdown.renderInline(ctx),
+    shorten: (ctx) => ctx.substr(0, 7),
+    uppercase: (ctx) => ctx.toUpperCase()
+  })
+
+  return reshape({ plugins: plugin })
+    .process(html)
+    .then((res) => {
+      t.truthy((/<p><strong>THE<\/strong><\/p>/).exec(res.output()))
+    })
+})
+
 test('postcss', (t) => {
   const html = getFixture('style.html')
   const postcss = require('postcss')([ require('postcss-nested')() ])
