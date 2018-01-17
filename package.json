@@ -13,16 +13,16 @@
     "when": "^3.7.8"
   },
   "devDependencies": {
-    "ava": "^0.20.0",
-    "babel-preset-env": "^1.5.2",
-    "coveralls": "^2.13.1",
-    "markdown-it": "^8.3.1",
-    "nyc": "^11.0.3",
-    "postcss": "^6.0.4",
-    "postcss-nested": "^2.0.2",
+    "ava": "^0.24.0",
+    "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
+    "markdown-it": "^8.4.0",
+    "nyc": "^11.4.1",
+    "postcss": "^6.0.16",
+    "postcss-nested": "^3.0.0",
     "reshape": "^0.4.0",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.0",
+    "standard": "^10.0.3",
     "sugarml": "^0.6.0"
   },
   "engines": {
