@@ -8,7 +8,7 @@
   },
   "bugs": "https://github.com/reshape/content/issues",
   "dependencies": {
-    "reshape-parser": "^0.2.1",
+    "reshape-parser": "^0.3.0",
     "reshape-plugin-util": "^0.2.1",
     "when": "^3.7.8"
   },
