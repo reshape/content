@@ -18,7 +18,7 @@
     "coveralls": "^3.0.0",
     "markdown-it": "^8.4.0",
     "nyc": "^11.4.1",
-    "postcss": "^6.0.16",
+    "postcss": "^7.0.10",
     "postcss-nested": "^3.0.0",
     "reshape": "^0.5.0",
     "snazzy": "^7.0.0",
